@@ -148,7 +148,7 @@ aberdeen_sf %>%
 aberdeen %>%
   select(Data_Zone, DZname, Total_population, perc_cant_speak, perc_white_polish, perc_asian_asian_scottish_or_asian_british, perc_african) %>%
    filter(perc_cant_speak >= 5) %>%
-   arrange(DZname) %>%
+   arrange(desc(DZname)) %>%
   gt() %>%
   fmt_number(columns = vars(
     perc_cant_speak, perc_white_polish, perc_asian_asian_scottish_or_asian_british, perc_african), decimals = 0) %>%
